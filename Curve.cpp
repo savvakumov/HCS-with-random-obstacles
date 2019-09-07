@@ -509,11 +509,6 @@ void SCurve::Load(const rrvector& pts, std::string gridfname, int nGridPoints, b
 		y2 = std::max<double>(y2, p[1]);
 	}
 
-	x1 -= (x2 - x1)*0.2;
-	x2 += (x2 - x1)*0.2;
-	y1 -= (y2 - y1)*0.2;
-	y2 += (y2 - y1)*0.2;
-
 	if(gridfname == "")
 		m_grid.Create(nGridPoints, SRect(x1, y1, x2, y2), bSquareGrid);
 	else
